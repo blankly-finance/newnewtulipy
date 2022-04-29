@@ -16,7 +16,7 @@ ext_modules = [
 ]
 
 setup(
-    name='newtulipy',
+    name='newnewtulipy',
     description='Financial Technical Analysis Indicator Library. Python bindings for https://github.com/TulipCharts/tulipindicators',
     long_description=long_description,
     long_description_content_type='text/markdown; charset=UTF-8',
