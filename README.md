@@ -1,7 +1,6 @@
-[![Build Status](https://travis-ci.com/cryptocoinserver/tulipy.svg?branch=master)](https://travis-ci.com/cryptocoinserver/tulipy)
 
-I forked the original repo to add support for 3.9.
-It's on pip. Use `pip install newtulipy`.
+This is a fork of newtulipy which is a fork of tulipy.
+Install with `pip install newnewtulipy`.
 
 # tulipy
 
