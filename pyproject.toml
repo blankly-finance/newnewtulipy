@@ -1,5 +1,5 @@
 [build-system]
 requires = [
-    "Cython~=0.29.24",
-    "numpy~=1.21.0"
+    "Cython",
+    "numpy"
 ]
