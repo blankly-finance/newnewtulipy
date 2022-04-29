@@ -3,3 +3,5 @@ requires = [
     "Cython",
     "numpy"
 ]
+
+backend="setuptools.build_meta"
