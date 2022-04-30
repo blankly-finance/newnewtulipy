@@ -15,8 +15,9 @@ jobs:
     name: Build wheels on ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     strategy:
+      fail-fast: false
       matrix:
-        os: [ubuntu-latest, windows-latest, macOS-latest]
+        os: [ubuntu-20.04, windows-2019, macOS-10.15]
 
     steps:
       - uses: actions/checkout@v2
@@ -24,7 +25,7 @@ jobs:
       - uses: ilammy/msvc-dev-cmd@v1
 
       - name: Install OpenBLAS (macos)
-        if: matrix.os == 'macOS-latest'
+        if: matrix.os == 'macOS-10.15'
         run: |
           brew install openblas
           echo "OPENBLAS=$(brew --prefix openblas)" >> $GITHUB_ENV
