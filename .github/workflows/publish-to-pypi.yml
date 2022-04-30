@@ -23,6 +23,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - uses: ilammy/msvc-dev-cmd@v1
+        if: matrix.os == 'windows-2019'
 
       - name: Install OpenBLAS (macos)
         if: matrix.os == 'macOS-10.15'
@@ -33,7 +34,8 @@ jobs:
       - name: Build wheels
         uses: pypa/cibuildwheel@v2.5.0
         env:
-          CIBW_SKIP: "cp36-*"
+          CIBW_BUILD: "cp37-* cp38-* cp39-* cp310-* pp37-* pp38-* pp39-*"
+          CIBW_ARCHS_WINDOWS: "auto64" # 32 bit works on other platforms
 
       - uses: actions/upload-artifact@v2
         with:
