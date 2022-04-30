@@ -24,7 +24,6 @@ jobs:
       - name: Install OpenBLAS (macos)
         if: matrix.os == 'macOS-latest'
         run: |
-          pip cache remove numpy
           brew install openblas
           echo "OPENBLAS=$(brew --prefix openblas)" >> $GITHUB_ENV
 
