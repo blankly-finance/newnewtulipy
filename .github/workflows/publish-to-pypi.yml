@@ -78,15 +78,15 @@ jobs:
           name: artifact
           path: dist
 
-      - name: Upload to test PyPI
-        uses: pypa/gh-action-pypi-publish@v1.4.2
-        with:
-          user: __token__
-          password: ${{ secrets.pypi_test_password }}
-          repository_url: https://test.pypi.org/legacy/
-
-      # - name: Upload to PyPI
+      # - name: Upload to test PyPI
       #   uses: pypa/gh-action-pypi-publish@v1.4.2
       #   with:
       #     user: __token__
-      #     password: ${{ secrets.pypi_password }}
+      #     password: ${{ secrets.pypi_test_password }}
+      #     repository_url: https://test.pypi.org/legacy/
+
+      - name: Upload to PyPI
+        uses: pypa/gh-action-pypi-publish@v1.4.2
+        with:
+          user: __token__
+          password: ${{ secrets.pypi_password }}
