@@ -5,9 +5,9 @@ requires = [
     "Cython",
     "numpy"
 ]
+backend="setuptools.build_meta"
 
 [tool.cibuildwheel.macos]
 archs = ["auto", "universal2"]
 # test-skip = ["*universal2:arm64"]
 
-backend="setuptools.build_meta"
