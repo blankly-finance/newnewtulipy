@@ -35,7 +35,7 @@ jobs:
         uses: pypa/cibuildwheel@v2.5.0
         env:
           CIBW_BUILD: "cp37-* cp38-* cp39-* cp310-* pp37-* pp38-* pp39-*"
-          CIBW_ARCHS_WINDOWS: "auto64" # 32 bit works on other platforms
+          #CIBW_ARCHS_WINDOWS: "auto64" # 32 bit works on other platforms
 
       - uses: actions/upload-artifact@v2
         with:
