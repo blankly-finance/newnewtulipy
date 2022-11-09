@@ -32,7 +32,7 @@ jobs:
           echo "OPENBLAS=$(brew --prefix openblas)" >> $GITHUB_ENV
 
       - name: Build wheels
-        uses: pypa/cibuildwheel@v2.5.0
+        uses: pypa/cibuildwheel@v2.11.2
         env:
           CIBW_SKIP: "cp27-* cp36-* pp27-*"
           CIBW_ARCHS_MACOS: "x86_64 universal2 arm64"
