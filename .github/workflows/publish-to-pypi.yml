@@ -36,6 +36,7 @@ jobs:
         env:
           CIBW_SKIP: "cp27-* cp36-* pp27-*"
           CIBW_ARCHS_MACOS: "x86_64 universal2 arm64"
+          CIBW_ARCHS_WINDOWS: "auto64"
 
       - uses: actions/upload-artifact@v2
         with:
